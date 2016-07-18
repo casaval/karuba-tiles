@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bundle": "webpack ./make.js bundle.js"
+    "bundle": "webpack ./make.js bundle.js",
+    "preview":"npm run bundle && http-server"
   },
   "repository": {
     "type": "git",
