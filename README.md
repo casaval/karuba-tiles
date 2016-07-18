@@ -1,2 +1,2 @@
-# karuba-tiles
-A small web app to help pick karuba tiles
+# karuba-tiles (karuba.surge.sh)
+A small web app to help pick karuba tiles.
