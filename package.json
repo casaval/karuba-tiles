@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "bundle": "webpack ./make.js bundle.js",
-    "preview":"npm run bundle && http-server"
+    "preview":"npm run bundle && http-server",
+    "surge":"surge -p ./ -d karuba.surge.sh"
   },
   "repository": {
     "type": "git",

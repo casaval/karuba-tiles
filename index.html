@@ -11,9 +11,11 @@
 <!-- APP TEMPLATE START -->
 <div id="app">
     <button v-on:click="drawTile">Draw a Tile</button>
-    <ul v-for="tile in played">
-        <li>{{tile}}</li>
-    </ul>
+    <ol>
+        <li v-for="tile in played">
+            {{tile}}
+        </li>
+    </ol>
 </div>
 
 <!-- APP TEMPLATE END -->
