@@ -1,6 +1,7 @@
 'use strict';
 
 const _ = require('lodash');
+const Jump = require('jump.js')
 const Vue = require('vue');
 
 let bag = _.range(1,37);
@@ -23,9 +24,14 @@ module.exports = function KarubaTilesApplication(){
             if(bag.length){
                 tile = _.pullAt(bag,0);
             }else{
-                tile = 'NO MORE TILES';
+                tile = 'DONE';
             }
             played.push(tile);
+            Vue.nextTick(()=>{
+                if ((window.innerHeight + window.scrollY) < document.body.offsetHeight) {
+                    Jump('footer');
+                }
+            });
         },
         reset: function () {
             console.log('resetting game state...');

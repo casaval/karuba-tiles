@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "bundle": "webpack",
-    "preview": "npm run build && webpack-dev-server --progress --colors --host 0.0.0.0",
+    "preview": "webpack-dev-server --progress --colors --host 0.0.0.0",
     "surge": "npm run bundle && surge -p ./ -d karuba.surge.sh",
     "build": "npm run bundle",
     "start": "npm run build"
@@ -36,6 +36,7 @@
   "dependencies": {
     "async": "^2.0.0",
     "bluebird": "^3.4.1",
+    "jump.js": "^1.0.1",
     "lodash": "^4.13.1",
     "materialize-css": "^0.97.6",
     "moment": "^2.14.1",
