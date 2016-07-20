@@ -84,10 +84,14 @@
 	            if(bag.length){
 	                tile = _.pullAt(bag,0);
 	            }else{
-	                tile = 'NO MORE TILES';
+	                tile = 'DONE';
 	            }
 	            played.push(tile);
-	            Jump(200);
+	            Vue.nextTick(()=>{
+	                if ((window.innerHeight + window.scrollY) < document.body.offsetHeight) {
+	                    Jump('footer');
+	                }
+	            });
 	        },
 	        reset: function () {
 	            console.log('resetting game state...');
