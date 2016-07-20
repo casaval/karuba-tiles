@@ -6,8 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "bundle": "webpack ./make.js bundle.js",
-    "preview":"npm run bundle && http-server",
-    "surge":"surge -p ./ -d karuba.surge.sh"
+    "preview": "npm run build && webpack-dev-server --progress --colors --host 0.0.0.0",
+    "surge": "npm run build && surge -p ./ -d karuba.surge.sh",
+    "build": "npm run bundle",
+    "start": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -24,8 +26,12 @@
   "homepage": "https://github.com/casaval/karuba-tiles#readme",
   "devDependencies": {
     "css-loader": "^0.23.1",
+    "file-loader": "^0.9.0",
+    "node-sass": "^3.8.0",
+    "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
     "async": "^2.0.0",

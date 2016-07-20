@@ -2,20 +2,25 @@
 <head>
     <meta charset="utf-8">
     
-    <!-- APP STYLES -->
-    <link rel="stylesheet" href="styles.css" type="text/css" />
-    
+    <!--STYLES-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 </head>
 <body>
      
 <!-- APP TEMPLATE START -->
 <div id="app">
-    <button v-on:click="drawTile">Draw a Tile</button>
-    <ol>
-        <li v-for="tile in played">
-            {{tile}}
-        </li>
-    </ol>
+    <div class="fixed-action-btn" style="top: 15px; right: 24px;">
+        <button class="btn-floating blue btn-large" v-on:click="drawTile"><i class="material-icons">add</i></button>
+        <button class="btn-floating grey btn-large" ><i class="material-icons">settings</i></button>
+    </div>
+    <div class="row" style="margin-right: 100px;">
+        <div class="left" style="width: 15%; margin: 5px; padding: 5px;" v-for="tile in played">
+            <div class="card-panel green darken-3 center-align" >
+                <h3 class="card-title white-text">{{tile}}</h3>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- APP TEMPLATE END -->
