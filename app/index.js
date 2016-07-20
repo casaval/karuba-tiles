@@ -10,7 +10,7 @@ console.log('bag:', bag);
 let played = [];
 
 module.exports = function KarubaTilesApplication(){
-    new Vue({
+    return new Vue({
       el: '#app',
       data: {
           bag: bag,

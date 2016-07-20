@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "bundle": "webpack ./make.js bundle.js",
     "preview": "npm run build && webpack-dev-server --progress --colors --host 0.0.0.0",
-    "surge": "npm run build && surge -p ./ -d karuba.surge.sh",
+    "surge": "npm run bundle && surge -p ./ -d karuba.surge.sh",
     "build": "npm run bundle",
     "start": "npm run build"
   },
