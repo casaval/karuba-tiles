@@ -1,6 +1,7 @@
 'use strict';
 
 const Vue = require('vue');
+const Jump = require('jump.js');
 
 /**
  * Shuffles array in place.
@@ -39,7 +40,7 @@ module.exports = function KarubaTilesApplication(){
             played.push(tile);
             Vue.nextTick(function(){
                 if ((window.innerHeight + window.scrollY) <= document.body.offsetHeight) {
-                    // Jump('footer');
+                    Jump('footer');
                 }
             });
         },
