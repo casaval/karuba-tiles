@@ -2,20 +2,28 @@
 <head>
     <meta charset="utf-8">
     
+    <!-- NO Zoom -->
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    
     <!--STYLES-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <style type="text/css">
+        body {
+            background: #a1a2a3;            
+        }
+    </style>
 </head>
 <body>
      
 <!-- APP TEMPLATE START -->
 <div id="app">
-    <div class="fixed-action-btn" style="top: 15px; right: 24px;">
-        <button class="btn-floating blue btn-large" v-on:click="drawTile"><i class="material-icons">add</i></button>
-        <button class="btn-floating grey btn-large" ><i class="material-icons">settings</i></button>
+    <div class="fixed-action-btn" style="top: 0px; right: 8px;">
+        <button class="btn-floating red btn-large" v-on:click="drawTile"><i class="material-icons">add</i></button>
+        <!--<button class="btn-floating grey btn-large" ><i class="material-icons">settings</i></button>-->
     </div>
-    <div class="row" style="margin-right: 100px;">
-        <div class="left" style="width: 15%; margin: 5px; padding: 5px;" v-for="tile in played">
+    <div class="row">
+        <div class="left" style="min-width: 115px; width: 15%; margin: 3px; padding: 3px;" v-for="tile in played">
             <div class="card-panel green darken-3 center-align" >
                 <h3 class="card-title white-text">{{tile}}</h3>
             </div>
@@ -27,6 +35,6 @@
 <!-- APP TEMPLATE END -->
 
 <!-- APP SCRIPTS-->
-<script type="text/javascript" src="bundle.js" charset="utf-8"></script>
+<script type="text/javascript" src="bundle.js"></script>
 </body>
 </html>
