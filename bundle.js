@@ -91,7 +91,7 @@
 	                if (bag.length) {
 	                    tile = bag.pop();
 	                } else {
-	                    tile = 'DONE';
+	                    return;
 	                }
 	                played.push(tile);
 	                Vue.nextTick(function () {
